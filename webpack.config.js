@@ -22,5 +22,9 @@ module.exports = {
   resolve: {
     // importした時拡張子がついていなかったら ts jsの順で探す
     extensions: ['.ts','.js']
-  }
+  },
+  plugins: [
+    new CleanWebpackPlugin()
+  ]
+
 }

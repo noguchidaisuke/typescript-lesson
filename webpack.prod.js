@@ -1,6 +1,7 @@
 const path = require('path')
+// npm install --save-dev clean-webpack-plugin
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // outputフォルダを常に綺麗に保つ。一つのファイルに纏め他のファイルを消す
-const { CleanWebpackPlugin} = require('clean-webpack-plugin')
 module.exports = {
   mode: 'production',
   //entry: './dist/main.js',
@@ -8,7 +9,6 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname,'dist'),
-    publicPath: '/dist/'
   },
   devtool: 'inline-source-map',
   module: {
